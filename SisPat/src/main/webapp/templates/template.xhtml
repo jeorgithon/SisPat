@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<h:head>
+	<!--css-->
+	<h:outputStylesheet library="css" name="estilos.css"/>
+	<title>SisPat</title>
+</h:head>
+<h:body>
+	<p:growl id="idGrowlMensagem" />
+        <!-- se usado align="center" aqui a imagem ficaria
+        centralizada sem precisar de css-->
+        <div id="idDivGeral">
+            <div id="idDivTopo" 
+                 class="divTopo">
+                
+                <p:graphicImage library="images"
+                				styleClass="imagemCentralizada"
+                                name="banner cisco.png"/>
+
+            </div>
+
+            <div id="idDivCabecalho">
+                <h:form>
+                    <p:menubar>
+                        <p:submenu label="Arquivo">
+                            <p:menuitem value="Sair"
+                                        />
+                        </p:submenu>
+                        <p:submenu label="Cadastros"
+                                   >
+                            
+                            <p:menuitem value="Organização"
+                                        
+                                        />
+                            <p:menuitem value="Categoria"
+                                        />
+                            <p:menuitem value="Usuário"
+                                        />
+                            <p:menuitem value="Localidade"
+                                        />
+                            <p:menuitem value="SubLocalidade"
+                                        />
+                            <p:menuitem value="Tipo"
+                                        />
+                            <p:menuitem value="Marca"
+                                        />
+                            <p:menuitem value="Modelo"
+                                        />
+                            <p:menuitem value="Origem"
+                                        />
+                            <p:menuitem value="Item"
+                                        />
+                            
+                        </p:submenu>
+                        
+                    </p:menubar>
+                </h:form>
+            </div>
+
+            <div id="idDivConteudo">
+                <!--Uso de facelets para constrir tamplate-->
+                <!--aqui deixamos para inserir conteúdo na página
+                que implementra o template--> 
+                <ui:insert name="insertConteudo"/>
+            </div>
+        </div>
+</h:body>
+</html>
